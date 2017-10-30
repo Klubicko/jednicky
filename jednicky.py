@@ -1,6 +1,11 @@
 ### Spocitej pocet jednicek v zadanem cisle
+cislo= int(input('Insert number:'))
+
 def pocet_jednicek(cislo):
     pocet = 0
+    #if cislo < 0:
+    #   cislo = -cislo
+    cislo = abs(cislo)
     while cislo >0:
         zbytek = cislo %10
         if zbytek == 1:
@@ -8,7 +13,7 @@ def pocet_jednicek(cislo):
         cislo = cislo // 10
     return pocet
 
-cislo= int(input('isert numeber:'))
+
 pocet = pocet_jednicek(cislo)
 
 print ("pocet jednicek v cisle {} je {}.".format(cislo,pocet))
